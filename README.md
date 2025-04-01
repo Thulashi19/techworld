@@ -1,4 +1,4 @@
-Tech world
+Tech world,
 This is a simple, responsive website built using HTML, Tailwind CSS, and Material UI. The website is designed to be clean, modern, and responsive, providing a seamless user
 experience across different devices.
 
