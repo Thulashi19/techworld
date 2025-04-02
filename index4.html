@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .service-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dark-mode-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark .dark-mode-toggle {
+            background-color: #424242;
+        }
+
+        
+        .dark-mode {
+            background-color: #1a202c; 
+            color: #edf2f7; 
+        }
+
+        .dark-mode header {
+            background-color: #2d3748; 
+            box-shadow: none;
+        }
+
+        .dark-mode header h1,
+        .dark-mode header a {
+            color: #f7fafc; 
+        }
+
+        .dark-mode header a:hover {
+            color: #63b3ed; 
+        }
+
+
+
+.dark-mode main section:nth-child(1) { 
+            background-color: #1D1616; 
+        }
+        .dark-mode main section:nth-child(2) { 
+            background-color: #2d3748; 
+        }
+        .dark-mode main section:nth-child(3) { 
+            background-color: #1D1616; 
+        }
+
+        .dark-mode main section:nth-child(2) h2 {
+            
+            color: #90cdf4; 
+        }
+
+        .dark-mode main section:nth-child(2) h3 {
+            color: #e2e8f0; 
+        }
+        .dark-mode .new{
+            background-color: #1D1616;
+        }
+        .dark-mode main section:last-child { 
+            background-color: #2d3748; 
+        }
+
+        .dark-mode main section:last-child h2 {
+            color: #90cdf4; 
+        }
+
+        .dark-mode main section:last-child p,
+        .dark-mode main section:last-child label,
+        .dark-mode main section:last-child input,
+        .dark-mode main section:last-child textarea {
+            color: #2d3748; 
+        }
+
+        .dark-mode main section:first-child h1 { 
+            color: skyblue; 
+        }
+
+        .dark-mode main section:first-child h2 { 
+            color: #A9B5DF; 
+        }
+
+        .dark-mode main section:first-child p { 
+            color: lightslategrey; 
+        }
+
+        .dark-mode main section:first-child button { 
+            background-color: #4D55CC; 
+       }
+
+        .dark-mode main section:first-child button:hover { 
+            background-color: darkblue; 
+        }
+
+        .dark-mode footer {
+            background-color: #2d3748; 
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <header class="bg-white py-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <div class="flex items-center">
+                <img src="logo1.webp" alt="Tech World Logo" class="h-10 mr-2">
+                <h1 class="text-xl font-bold text-gray-800">Tech World</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-blue-500">Home</a>
+                <a href="#service" class="text-gray-700 hover:text-blue-500">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a>
+            </nav>
+            <button class="bg-blue-600 hover:bg-blue-800 text-white rounded-lg shadow-lg px-4 py-2">Request Us</button>
+            <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <i id="darkModeIcon" class="material-icons">brightness_4</i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-20" id="about">
+            <div class="container mx-auto px-4 lg:px-20 flex flex-col md:flex-row items-center justify-between">
+                <div class="text-center md:text-left md:w-1/2">
+                    <h1 class="text-4xl lg:text-5xl font-bold text-purple-700 mb-4">TECH WORLD</h1>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">DESIGN, BUILD & GROW</h2>
+                    <p class="text-gray-600 mt-4 text-lg">Your Business with our IT Solutions</p>
+                    <button class="mt-6 bg-blue-600 hover:bg-blue-800 text-white px-6 py-3 rounded-lg shadow-lg flex items-center">
+                        <span class="material-icons mr-2">description</span> Request a Quotation
+                    </button>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <img src="img1.png" alt="Tech World" class="w-full rounded-xl shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100" id="service">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8 text-blue-800">Services We Provide</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <a href="#" class="service-item flex flex-col items-center p-4 rounded-lg cursor-pointer">
+                        <i class="material-icons text-4xl text-blue-500 mb-4">computer</i>
+                        <h3 class="text-lg font-semibold text-gray-700">Web Development</h3>
+                    </a>
+                    <a href="#" class="service-item flex flex-col items-center p-4 rounded-lg cursor-pointer">
+                        <i class="material-icons text-4xl text-blue-500 mb-4">campaign</i>
+                        <h3 class="text-lg font-semibold text-gray-700">Digital Marketing</h3>
+                    </a>
+                    <a href="#" class="service-item flex flex-col items-center p-4 rounded-lg cursor-pointer">
+                        <i class="material-icons text-4xl text-blue-500 mb-4">headset_mic</i>
+                        <h3 class="text-lg font-semibold text-gray-700">IT Support</h3>
+                    </a>
+                    <a href="#" class="service-item flex flex-col items-center p-4 rounded-lg cursor-pointer">
+                        <i class="material-icons text-4xl text-blue-500 mb-4">design_services</i>
+                        <h3 class="text-lg font-semibold text-gray-700">UI/UX Design</h3>
+                    </a>
+                    <a href="#" class="service-item flex flex-col items-center p-4 rounded-lg cursor-pointer">
+                        <i class="material-icons text-4xl text-blue-500 mb-4">format_shapes</i>
+                        <h3 class="text-lg font-semibold text-gray-700">Graphics Design</h3>
+                    </a>
+                    <a href="#" class="service-item flex flex-col items-center p-4 rounded-lg cursor-pointer">
+                        <i class="material-icons text-4xl text-blue-500 mb-4">phone_android</i>
+                        <h3 class="text-lg font-semibold text-gray-700">App Development</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16" id="contact">
+           
+            <div class="container mx-auto rounded-lg shadow-xl overflow-hidden bg-white">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+
+                    <div class="p-12 bg-gradient-to-r from-blue-100 to-blue-200">
+
+                        <h2 class="text-3xl font-bold mb-6 text-blue-800">Get in Touch</h2>
+                        <p class="text-gray-700 mb-8">We'd love to hear from you! Please fill out the form below, and we'll get back to you as soon as possible.</p>
+                        <div class="flex items-center mb-6">
+                            <i class="material-icons text-3xl text-blue-600 mr-4">location_on</i>
+                            <p class="text-gray-700">123 Main Street, Jaffna, Sri Lanka</p>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="material-icons text-3xl text-blue-600 mr-4">phone</i>
+                            <p class="text-gray-700">021-256890</p>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="material-icons text-3xl text-blue-600 mr-4">email</i>
+                            <p class="text-gray-700">Techworld@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="p-12">
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Tech World. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+   
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("darkModeIcon").textContent = "brightness_7";
+    }
+});
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const icon = document.getElementById("darkModeIcon");
+    if (document.body.classList.contains("dark-mode")) {
+        icon.textContent = "brightness_7";
+        localStorage.setItem("theme", "dark");
+    } else {
+        icon.textContent = "brightness_4";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+</script>
+</body>
+
+</html>
